@@ -7,7 +7,7 @@
 |IIT2019112|Payili Vangmayi|hermoine2002|
 |IIT2019113|Nimish Upadhyay|DEADPOOL2001|
 
-**Group No-** 20
+**Group No-** 7
 
 **Faculty Name-** Dr. Rahul Kala IIIT Allahabad
 
@@ -96,17 +96,25 @@ f(n) = f(n - 1) + (n - 1) * f(n - 2)
 
 **Time Complexity**
 ```
-For all the cases : o(n*m*(log(m))
+1) For naive approach :- 
+   T(n) = o(2^n)
+
+2) For Dp approach :- 
+   T(n) = o(n)
 ```
 **Space Complexity**
 ```
-For all the cases : o(n*m)
+1) For naive approach :- let S(n) be the Space complexity of the naive approach then,
+   S(n) = Stack Space of the recursion = o(n)
+
+2) For Dp approach :- let S(n) be the Space complexity of the Dp approach then,
+   S(n) = Stack Space of the recursion + size of the array = o(n) + o(n) = o(n)
 ```
 where n is no. of rows and m is no. of coloumns in our matrix.
 
 ---
 ### References
 
-GFG : Divide and Conquer
+GFG : Dynamic programming
 
-Tutorials Point : UpperBound
+Cp Algorithm : Time-complexity Analysis
