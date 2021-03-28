@@ -22,12 +22,12 @@ Given n friends, each one can remain single or can be paired up with some other 
 
 Download project
 ```
-git clone https://github.com/DEADPOOL2001/DaaAssingment1.git
+git clone https://github.com/DEADPOOL2001/DaaAssingment2.git
 ```
 Project Initialize 
 ```
 #Opening Assingment folder
-cd DaaAssingment1
+cd DaaAssingment2
 
 #Compiling The code
 g++ daa.cpp -o output
