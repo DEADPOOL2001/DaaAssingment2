@@ -110,7 +110,7 @@ f(n) = f(n - 1) + (n - 1) * f(n - 2)
 2) For Dp approach :- let S(n) be the Space complexity of the Dp approach then,
    S(n) = Stack Space of the recursion + size of the array = o(n) + o(n) = o(n)
 ```
-where n is no. of rows and m is no. of coloumns in our matrix.
+where n is the no. of friends.
 
 ---
 ### References
