@@ -30,22 +30,24 @@ Project Initialize
 cd DaaAssingment2
 
 #Compiling The code
-g++ daa.cpp -o output
+g++ naive_approach.cpp -o output1
+g++ dp_approach.cpp -o output2
 ```
 ---
 
 Run the code
 ```
-./output
+./output1
+./output2
 ```
 Input
 ```
-First line of input contains two space seperated integers n and m.
-where n and m are no. of rows and no. of coloumns respectively.
+First line of input contains two space seperated integers n .
+where n is the no. of friends.
 ```
 Ouput 
 ```
-Minimum possible absolute difference between any two elements belonging to the consecutive rows.
+Total number of ways in which friends can remain single or can be paired up.
 ```
 ---
 **Test case**
@@ -53,27 +55,41 @@ Minimum possible absolute difference between any two elements belonging to the c
 Test Case-1
 ```
 Input:
-7 8
+3
 Output:
-512
+4
+Explanation:
+{1}, {2}, {3} : all single
+{1}, {2, 3} : 2 and 3 paired but 1 is single.
+{1, 2}, {3} : 1 and 2 are paired but 3 is single.
+{1, 3}, {2} : 1 and 3 are paired but 2 is single.
+Note that {1, 2} and {2, 1} are considered same.
 ```
 
 Test Case-2
 ```
 Input:
-5 5
+4
 Output:
-112
+10
 ```
 ---
 ### Theory
+
 Logic
 ```
-We will select two consecutive rows and iterate over a row and find the two elements(if they exist) in another row , just small or equal element then our current element and just larger element the our current element.
-```
-Implementation
-```
-We will randomly generate our 2-d array of size given by the user using rand function and sort all the rows using merge sort.Then we will iterate over the rows from first row to second last row and find the upperbound of the current element using binary search in the next row and if the absolute difference comes out to be lesser then our current answer then we will store it.
+f(n) = ways n people can remain single 
+       or pair up.
+
+For n-th person there are two choices:
+1) n-th person remains single, we recur 
+   for f(n - 1)
+2) n-th person pairs up with any of the 
+   remaining n - 1 persons. We get (n - 1) * f(n - 2)
+
+Therefore we can recursively write f(n) as:
+f(n) = f(n - 1) + (n - 1) * f(n - 2)
+
 ```
 ---
 ### Analysis
