@@ -30,8 +30,8 @@ Project Initialize
 cd DaaAssingment2
 
 #Compiling The code
-g++ naive_approach.cpp -o output1
-g++ dp_approach.cpp -o output2
+g++ -o output1 naive_approach.cpp
+g++ -o output2 dp_approach.cpp
 ```
 ---
 
